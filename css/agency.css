@@ -38,7 +38,6 @@ body {
   #heading{
     margin-top: -35px;
     font-size: 100%;
-    margin-bottom: -35px;
   }
   #feat11{
     display:block;
@@ -1111,7 +1110,7 @@ section#contact {
 }
 
 .well2{
-  margin-top: -5px;
+  margin-top: 0px;
   background-color: #f1deff;
   left: 60%;
   right: 5%;
