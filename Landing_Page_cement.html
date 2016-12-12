@@ -20,10 +20,12 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.js"></script>
-	<script src="js/snippet.js"></script>
-	<script src="js/agency.js"></script>
+	<!-- <script src="js/agency.js"></script> -->
+	<script src="js/forminput.js"></script>
+
 <style>
 @media screen and (max-width: 600px)
 {
@@ -104,19 +106,19 @@
 			<div class="col-md-5">
 					<div class="well2" style="color:#545454;">
       			<form id="cementForm">
-                <div class="form-group row hide" id="cementMessage">
+                <div class="form-group row hide" id="cementMessage" method="post">
                     <label  class="col-md-12 form-control-label" style="text-align: center; color:#9d44de;">Your request has been submitted.
 													 Our representative will contact you soon.</label>
                 </div>
                 <div class="form-group row">
                     <div class="col-md-12">
-                        <input type="text" class="form-control" id="tmt-name" placeholder="Name*" required data-validation-required-message="Please
+                        <input type="text" class="form-control" id="name" placeholder="Name*" required data-validation-required-message="Please
 												enter your name." style="margin-bottom:15px;">
                     </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <input type="text" maxlength="10" style="margin-bottom:15px;" pattern="\d{10}" class="form-control" id="tmt-mobile" placeholder="Mobile*" required="required">
+                    <input type="text" maxlength="10" style="margin-bottom:15px;" pattern="\d{10}" class="form-control" id="mobile" placeholder="Mobile*" required="required">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -134,7 +136,7 @@
       							</select>
 									</div>
                 	<div class="col-md-4 col-xs-4" style="padding-left:0;padding-right:0;" align="left">
-										<input type="number" class="form-control" id="quantity" placeholder="1" min="1" style="float:right;width:80px;">
+										<input type="number" class="form-control" id="quantity" value="1" placeholder="1" min="1" style="float:right;width:80px;">
                 	</div>
 									<div class="col-md-3 col-xs-2" style="padding-left:0;" align="left">
 										<label for"weight" id="label" style="margin-top:8px;margin-left:2px;padding-left:-15px;float:left;">bags</label>
@@ -147,14 +149,13 @@
                 </div>
 								<div class="form-group row">
                   <div class="col-md-12">
-                      <input type="text" class="form-control" id="locationTextField3" size="50" placeholder="Location" style="margin-top:15px;">
-											<input type="text" id="tmt-location" style="display:none">
+                      <input type="text" class="form-control" id="loc" size="50" placeholder="Location" style="margin-top:15px;">
                   </div>
                 </div>
 								<div class="form-group row">
-                  <div class="col-md-12">
+                  <div class="col-md-offset-3 col-md-6">
                   	<div id="sypSuccess"></div>
-                      <button id="sypSubmit" class="btn btn-primary2 btn-block" style="margin-top:15px;">Submit</button>
+                      <input  type="submit" id="form_submit" class="btn btn-primary2 btn-block" style="margin-top:15px;" value="submit">
                   </div>
                 </div>
             </form>
