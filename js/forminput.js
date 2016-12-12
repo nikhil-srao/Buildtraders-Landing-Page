@@ -22,7 +22,13 @@ $(document).ready(function(){
       },
       cache: false,
       success: function(result){
-        alert(result);
+        $("#name").val("");
+        $("#quantity").val("1");
+        $("#mobile").val("");
+        $("#material").val("");
+        $("#email").val("");
+        $("#loc").val("");
+          document.getElementById("cementMessage").style.display = "block";
         }
     });
   }
